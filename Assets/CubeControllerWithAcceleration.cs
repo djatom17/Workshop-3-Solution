@@ -11,14 +11,22 @@ public class CubeControllerWithAcceleration : MonoBehaviour {
     void Update()
     {
         float dx = 0.0f, dz = 0.0f;
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow)){
+            print("RightArrow");
             dx += 1.0f;
-        if (Input.GetKey(KeyCode.LeftArrow))
+        }
+        if (Input.GetKey(KeyCode.LeftArrow)){
+            print("LeftArrow");
             dx -= 1.0f;
-        if (Input.GetKey(KeyCode.UpArrow))
+        }
+        if (Input.GetKey(KeyCode.UpArrow)){
+            print("UpArrow");
             dz += 1.0f;
-        if (Input.GetKey(KeyCode.DownArrow))
+        }
+        if (Input.GetKey(KeyCode.DownArrow)){
+            print("DownArrow");
             dz -= 1.0f;
+        }
 
         velocity += new Vector3(dx, 0.0f, dz) * accelerationFactor * Time.deltaTime;
 

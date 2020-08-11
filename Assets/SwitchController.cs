@@ -30,7 +30,11 @@ public class SwitchController : MonoBehaviour {
             // Swap the script
             controller.enabled = !controller.enabled;
             controllerAcc.enabled = !controllerAcc.enabled;
-
+            if(controller.enabled){
+                print("Step Enabled");
+            }else{
+                print("Accelerate Enabled");
+            }
             // Change the material
             meshRenderer.material = controller.enabled ? movementMaterial : accelerationMaterial;
         }
